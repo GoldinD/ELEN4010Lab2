@@ -3,7 +3,7 @@
 let path = require('path')
 let express = require('express')
 let app = express()
-let mainRouter = require('/Users/Dean/Desktop/SoftwareRepo/Lab2/Section14/mainRoutes.js')
+let mainRouter = require('mainRoutes.js')
 
 app.use(mainRouter)
 let port = process.env.PORT || 3000; 
