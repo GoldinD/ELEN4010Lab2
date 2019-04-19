@@ -1,11 +1,11 @@
 'use strict'
 
-let path = require('path');
-let express = require('express');
-let app = express();
-app.get('/', function (req, res) {
-    res.send('Hello World'); 
-});
+let path = require('path')
+let express = require('express')
+let app = express()
+let mainRouter = require('/Users/Dean/Desktop/SoftwareRepo/Lab2/Section14/mainRoutes.js')
 
-app.listen(3000); 
-console.log("Express server running on port 3000");
+app.use(mainRouter)
+let port = process.env.PORT || 3000; 
+app.listen(port); 
+console.log("Express server running on port", port);
